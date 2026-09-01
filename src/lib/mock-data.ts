@@ -160,7 +160,19 @@ export const currentUser = getProfile(currentUserId);
 
 /* ---------------------------------- posts --------------------------------- */
 
-const minutesAgo = (m: number) => new Date(Date.now() - m * 60_000).toISOString();
+/**
+ * SSR-safe time anchor.
+ *
+ * Seed timestamps must serialise to the exact same relative label on the
+ * server and in the browser, otherwise React reports a hydration mismatch.
+ * `Date.now()` differs by milliseconds between the two, which flips labels
+ * across a minute boundary ("8m" vs "9m"). Rounding down to the current hour
+ * gives both environments an identical baseline.
+ */
+export const SEED_ANCHOR = Math.floor(Date.now() / 3_600_000) * 3_600_000;
+
+const minutesAgo = (m: number) => new Date(SEED_ANCHOR - m * 60_000).toISOString();
+
 
 export const posts: Post[] = [
   {
