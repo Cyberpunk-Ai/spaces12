@@ -127,9 +127,11 @@ function NotificationsPage() {
                       className="h-6 w-6 text-[0.6rem]"
                     />
                     <span className="truncate text-sm font-bold">{actor.display_name}</span>
-                    <span className="shrink-0 text-xs text-muted-foreground">
-                      {timeAgo(n.created_at)}
-                    </span>
+                    <TimeAgo
+                      iso={n.created_at}
+                      className="shrink-0 text-xs text-muted-foreground"
+                    />
+
                   </span>
                   <span className="mt-1 block text-sm text-muted-foreground">{n.body}</span>
                 </span>
