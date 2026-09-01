@@ -43,7 +43,6 @@ function MessagesPage() {
   const endRef = useRef<HTMLDivElement>(null);
   const now = useLiveNow();
 
-
   const active = seedConversations.find((c) => c.id === activeId)!;
   const partner = getProfile(active.participant_id);
   const thread = useMemo(() => all.filter((m) => m.conversation_id === activeId), [all, activeId]);
@@ -132,7 +131,6 @@ function MessagesPage() {
                         iso={c.updated_at}
                         className="shrink-0 text-[0.7rem] text-muted-foreground"
                       />
-
                     </span>
                     <span className="mt-0.5 flex items-center gap-2">
                       <span className="line-clamp-1 flex-1 text-xs text-muted-foreground">

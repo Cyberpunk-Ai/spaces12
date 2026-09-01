@@ -173,7 +173,6 @@ export const SEED_ANCHOR = Math.floor(Date.now() / 3_600_000) * 3_600_000;
 
 const minutesAgo = (m: number) => new Date(SEED_ANCHOR - m * 60_000).toISOString();
 
-
 export const posts: Post[] = [
   {
     id: "p1",
@@ -510,7 +509,6 @@ export function timeAgo(iso: string, now: number = SEED_ANCHOR) {
   if (d < 7) return `${d}d`;
   return `${Math.floor(d / 7)}w`;
 }
-
 
 export function compact(n: number) {
   if (n < 1000) return `${n}`;

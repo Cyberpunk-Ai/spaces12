@@ -133,7 +133,6 @@ function NotificationsPage() {
                       iso={n.created_at}
                       className="shrink-0 text-xs text-muted-foreground"
                     />
-
                   </span>
                   <span className="mt-1 block text-sm text-muted-foreground">{n.body}</span>
                 </span>

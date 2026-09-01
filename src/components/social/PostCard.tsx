@@ -79,11 +79,7 @@ export function PostCard({ post, index = 0 }: { post: Post; index?: number }) {
             {author.verified && <BadgeCheck className="h-4 w-4 shrink-0 text-brand" />}
             <span className="truncate text-sm text-muted-foreground">@{author.username}</span>
             <span className="text-muted-foreground">·</span>
-            <TimeAgo
-              iso={post.created_at}
-              className="shrink-0 text-sm text-muted-foreground"
-            />
-
+            <TimeAgo iso={post.created_at} className="shrink-0 text-sm text-muted-foreground" />
           </div>
           <p className="mt-2 whitespace-pre-wrap text-[0.975rem] leading-relaxed">{post.content}</p>
         </div>
