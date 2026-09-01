@@ -41,6 +41,8 @@ function MessagesPage() {
   const [query, setQuery] = useState("");
   const [mobileOpen, setMobileOpen] = useState(false);
   const endRef = useRef<HTMLDivElement>(null);
+  const now = useLiveNow();
+
 
   const active = seedConversations.find((c) => c.id === activeId)!;
   const partner = getProfile(active.participant_id);
