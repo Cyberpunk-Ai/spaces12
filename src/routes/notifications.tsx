@@ -1,6 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Heart, UserPlus, MessageCircle, Repeat2, AtSign, Radio, CheckCheck, BellOff } from "lucide-react";
+import {
+  Heart,
+  UserPlus,
+  MessageCircle,
+  Repeat2,
+  AtSign,
+  Radio,
+  CheckCheck,
+  BellOff,
+} from "lucide-react";
 import { AppShell, PageHeader, Panel } from "@/components/social/AppShell";
 import { Avatar } from "@/components/social/Avatar";
 import { DefaultRail } from "@/components/social/RightRail";
@@ -112,9 +121,15 @@ function NotificationsPage() {
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="flex items-center gap-2">
-                    <Avatar name={actor.display_name} src={actor.avatar_url} className="h-6 w-6 text-[0.6rem]" />
+                    <Avatar
+                      name={actor.display_name}
+                      src={actor.avatar_url}
+                      className="h-6 w-6 text-[0.6rem]"
+                    />
                     <span className="truncate text-sm font-bold">{actor.display_name}</span>
-                    <span className="shrink-0 text-xs text-muted-foreground">{timeAgo(n.created_at)}</span>
+                    <span className="shrink-0 text-xs text-muted-foreground">
+                      {timeAgo(n.created_at)}
+                    </span>
                   </span>
                   <span className="mt-1 block text-sm text-muted-foreground">{n.body}</span>
                 </span>

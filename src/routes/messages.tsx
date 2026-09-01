@@ -42,10 +42,7 @@ function MessagesPage() {
 
   const active = seedConversations.find((c) => c.id === activeId)!;
   const partner = getProfile(active.participant_id);
-  const thread = useMemo(
-    () => all.filter((m) => m.conversation_id === activeId),
-    [all, activeId],
-  );
+  const thread = useMemo(() => all.filter((m) => m.conversation_id === activeId), [all, activeId]);
 
   const list = seedConversations.filter((c) => {
     const p = getProfile(c.participant_id);
@@ -115,7 +112,11 @@ function MessagesPage() {
                   )}
                 >
                   <span className="relative">
-                    <Avatar name={p.display_name} src={p.avatar_url} className="h-11 w-11 text-xs" />
+                    <Avatar
+                      name={p.display_name}
+                      src={p.avatar_url}
+                      className="h-11 w-11 text-xs"
+                    />
                     {c.online && (
                       <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-emerald-500 ring-2 ring-card" />
                     )}
@@ -142,7 +143,9 @@ function MessagesPage() {
               );
             })}
             {list.length === 0 && (
-              <p className="p-6 text-center text-sm text-muted-foreground">No conversations found.</p>
+              <p className="p-6 text-center text-sm text-muted-foreground">
+                No conversations found.
+              </p>
             )}
           </div>
         </div>
@@ -157,7 +160,11 @@ function MessagesPage() {
             >
               <ArrowLeft className="h-4 w-4" />
             </button>
-            <Avatar name={partner.display_name} src={partner.avatar_url} className="h-10 w-10 text-xs" />
+            <Avatar
+              name={partner.display_name}
+              src={partner.avatar_url}
+              className="h-10 w-10 text-xs"
+            />
             <div className="min-w-0 flex-1">
               <p className="truncate text-sm font-bold">{partner.display_name}</p>
               <p className="truncate text-xs text-muted-foreground">

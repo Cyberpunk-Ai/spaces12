@@ -94,7 +94,11 @@ function SpaceCard({ space, index }: { space: Space; index: number }) {
                 : "bg-foreground/5 text-foreground hover:bg-foreground/10",
             )}
           >
-            {space.live ? <Play className="h-4 w-4 fill-current" /> : <Calendar className="h-4 w-4" />}
+            {space.live ? (
+              <Play className="h-4 w-4 fill-current" />
+            ) : (
+              <Calendar className="h-4 w-4" />
+            )}
             {space.live ? "Join Space" : "Remind me"}
           </button>
         </div>

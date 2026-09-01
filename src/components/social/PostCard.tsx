@@ -1,5 +1,14 @@
 import { useState } from "react";
-import { Heart, MessageCircle, Repeat2, Bookmark, Share2, BarChart3, MoreHorizontal, BadgeCheck } from "lucide-react";
+import {
+  Heart,
+  MessageCircle,
+  Repeat2,
+  Bookmark,
+  Share2,
+  BarChart3,
+  MoreHorizontal,
+  BadgeCheck,
+} from "lucide-react";
 import { Avatar } from "@/components/social/Avatar";
 import { compact, getProfile, timeAgo, type Post } from "@/lib/mock-data";
 import { cn } from "@/lib/utils";
@@ -68,7 +77,9 @@ export function PostCard({ post, index = 0 }: { post: Post; index?: number }) {
             {author.verified && <BadgeCheck className="h-4 w-4 shrink-0 text-brand" />}
             <span className="truncate text-sm text-muted-foreground">@{author.username}</span>
             <span className="text-muted-foreground">·</span>
-            <span className="shrink-0 text-sm text-muted-foreground">{timeAgo(post.created_at)}</span>
+            <span className="shrink-0 text-sm text-muted-foreground">
+              {timeAgo(post.created_at)}
+            </span>
           </div>
           <p className="mt-2 whitespace-pre-wrap text-[0.975rem] leading-relaxed">{post.content}</p>
         </div>

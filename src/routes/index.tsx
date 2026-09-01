@@ -44,7 +44,6 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-
 /* ---------------------------------- hooks --------------------------------- */
 
 function useReveal<T extends HTMLElement>() {
@@ -60,7 +59,7 @@ function useReveal<T extends HTMLElement>() {
           obs.disconnect();
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
     obs.observe(el);
     return () => obs.disconnect();
@@ -298,8 +297,8 @@ function Hero() {
             <span className="gradient-text">comes to life</span>
           </h1>
           <p className="max-w-lg text-xl text-gray-600">
-            Connect with friends, share moments, and discover a community that
-            celebrates creativity. Built for the way you actually live.
+            Connect with friends, share moments, and discover a community that celebrates
+            creativity. Built for the way you actually live.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
@@ -370,8 +369,8 @@ function Features() {
             Everything you need to <span className="gradient-text">stay connected</span>
           </h2>
           <p className="text-xl text-gray-600">
-            Powerful tools designed to help you express yourself, build
-            relationships, and grow your audience.
+            Powerful tools designed to help you express yourself, build relationships, and grow your
+            audience.
           </p>
         </Reveal>
         <div className="grid gap-6 md:grid-cols-3">
@@ -387,8 +386,8 @@ function Features() {
               </div>
               <h3 className="mb-4 text-3xl font-bold">An algorithm that actually gets you</h3>
               <p className="text-lg text-gray-600">
-                Our AI learns what you love and surfaces content from people and
-                topics that matter to you — no doomscrolling required.
+                Our AI learns what you love and surfaces content from people and topics that matter
+                to you — no doomscrolling required.
               </p>
             </div>
           </Reveal>
@@ -399,8 +398,8 @@ function Features() {
               </div>
               <h3 className="mb-4 text-2xl font-bold">Stories &amp; Reels</h3>
               <p className="text-gray-600">
-                Share fleeting moments or polished short-form video with
-                cinematic editing tools built right in.
+                Share fleeting moments or polished short-form video with cinematic editing tools
+                built right in.
               </p>
             </div>
           </Reveal>
@@ -411,8 +410,7 @@ function Features() {
               </div>
               <h3 className="mb-4 text-2xl font-bold">Communities</h3>
               <p className="text-gray-600">
-                Find your tribe. Join groups around your hobbies, interests, and
-                passions.
+                Find your tribe. Join groups around your hobbies, interests, and passions.
               </p>
             </div>
           </Reveal>
@@ -428,8 +426,8 @@ function Features() {
               </div>
               <h3 className="mb-4 text-3xl font-bold">Chat, call, and gather in one place</h3>
               <p className="text-lg text-gray-600">
-                End-to-end encrypted messaging, voice notes, and live video rooms
-                make it easy to stay close to the people who matter.
+                End-to-end encrypted messaging, voice notes, and live video rooms make it easy to
+                stay close to the people who matter.
               </p>
             </div>
           </Reveal>
@@ -473,7 +471,12 @@ function Features() {
 
 function Community() {
   const spaces = [
-    { name: "Design & Motion", members: "84k", icon: Sparkles, grad: "from-violet-500 to-pink-500" },
+    {
+      name: "Design & Motion",
+      members: "84k",
+      icon: Sparkles,
+      grad: "from-violet-500 to-pink-500",
+    },
     { name: "Street Photography", members: "61k", icon: Zap, grad: "from-blue-500 to-cyan-500" },
     { name: "Indie Makers", members: "47k", icon: Radio, grad: "from-orange-500 to-red-500" },
   ];
@@ -495,7 +498,9 @@ function Community() {
                   className="flex items-center justify-between rounded-2xl border border-gray-100 p-4 transition-colors hover:bg-gray-50"
                 >
                   <div className="flex items-center gap-3">
-                    <span className={`flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br ${s.grad} text-white`}>
+                    <span
+                      className={`flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br ${s.grad} text-white`}
+                    >
                       <s.icon className="h-4 w-4" />
                     </span>
                     <div>
@@ -517,8 +522,8 @@ function Community() {
             Find your people in <span className="gradient-text">Spaces</span>
           </h2>
           <p className="text-xl text-gray-600">
-            Topic-based communities with live audio rooms, events, and shared
-            collections. Drop in, listen, or take the stage.
+            Topic-based communities with live audio rooms, events, and shared collections. Drop in,
+            listen, or take the stage.
           </p>
           <ul className="space-y-4 text-gray-700">
             {[
@@ -558,8 +563,8 @@ function Creators() {
             Turn your passion into a <span className="gradient-text">paycheck</span>
           </h2>
           <p className="text-xl text-gray-600">
-            Subscriptions, tips, and brand deals — with analytics that show
-            exactly what resonates. Keep up to 95% of what you earn.
+            Subscriptions, tips, and brand deals — with analytics that show exactly what resonates.
+            Keep up to 95% of what you earn.
           </p>
           <div className="grid grid-cols-2 gap-6">
             <div className="glass-panel rounded-3xl p-6 shadow-soft">
@@ -585,7 +590,10 @@ function Creators() {
               ))}
             </div>
             <div className="mt-4 flex justify-between text-xs text-gray-400">
-              <span>Jan</span><span>Mar</span><span>May</span><span>Jul</span>
+              <span>Jan</span>
+              <span>Mar</span>
+              <span>May</span>
+              <span>Jul</span>
             </div>
           </div>
         </Reveal>
@@ -719,12 +727,7 @@ function Pricing() {
       name: "Pro",
       tagline: "For serious teams",
       monthly: 29,
-      features: [
-        "Everything in Plus",
-        "Team workspaces",
-        "Priority support",
-        "API access",
-      ],
+      features: ["Everything in Plus", "Team workspaces", "Priority support", "API access"],
       cta: "Contact Sales",
       style: "border border-gray-200 hover:bg-gray-50",
       popular: false,
@@ -826,8 +829,7 @@ function Cta() {
               Ready to light up your world?
             </h2>
             <p className="text-lg text-white/80">
-              Join millions of creators and communities on Lumen. Free forever,
-              upgrade anytime.
+              Join millions of creators and communities on Lumen. Free forever, upgrade anytime.
             </p>
             {sent ? (
               <p className="mx-auto flex max-w-md items-center justify-center gap-2 rounded-full bg-white/10 px-6 py-4 font-semibold text-white">
@@ -881,8 +883,7 @@ function Footer() {
           <div className="md:col-span-2">
             <p className="mb-4 text-2xl font-extrabold tracking-tight">Lumen</p>
             <p className="max-w-xs text-gray-500">
-              The next-generation social platform built for creators and
-              communities.
+              The next-generation social platform built for creators and communities.
             </p>
           </div>
           {cols.map((c) => (

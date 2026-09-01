@@ -68,7 +68,14 @@ export function Composer({ onPost }: { onPost?: (content: string) => void }) {
               {draft.length > 0 && (
                 <div className="relative h-7 w-7">
                   <svg viewBox="0 0 36 36" className="h-7 w-7 -rotate-90">
-                    <circle cx="18" cy="18" r="15" fill="none" strokeWidth="3" className="stroke-border" />
+                    <circle
+                      cx="18"
+                      cy="18"
+                      r="15"
+                      fill="none"
+                      strokeWidth="3"
+                      className="stroke-border"
+                    />
                     <circle
                       cx="18"
                       cy="18"

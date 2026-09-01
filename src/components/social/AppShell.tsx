@@ -222,13 +222,7 @@ function MobileTab({ item }: { item: NavItem }) {
   );
 }
 
-export function Panel({
-  children,
-  className,
-}: {
-  children: ReactNode;
-  className?: string;
-}) {
+export function Panel({ children, className }: { children: ReactNode; className?: string }) {
   return (
     <section
       className={cn(

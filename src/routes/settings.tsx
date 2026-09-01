@@ -1,14 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import {
-  User,
-  Bell,
-  Lock,
-  Palette,
-  Shield,
-  ChevronRight,
-  Check,
-} from "lucide-react";
+import { User, Bell, Lock, Palette, Shield, ChevronRight, Check } from "lucide-react";
 import { AppShell, PageHeader, Panel } from "@/components/social/AppShell";
 import { Avatar } from "@/components/social/Avatar";
 import { currentUser } from "@/lib/mock-data";
@@ -149,8 +141,16 @@ function SettingsPage() {
                   </div>
                 </div>
 
-                <TextField label="Display name" value={form.name} onChange={(v) => setForm({ ...form, name: v })} />
-                <TextField label="Username" value={form.username} onChange={(v) => setForm({ ...form, username: v })} />
+                <TextField
+                  label="Display name"
+                  value={form.name}
+                  onChange={(v) => setForm({ ...form, name: v })}
+                />
+                <TextField
+                  label="Username"
+                  value={form.username}
+                  onChange={(v) => setForm({ ...form, username: v })}
+                />
                 <div>
                   <label className="mb-1.5 block text-xs font-bold uppercase tracking-wide text-muted-foreground">
                     Bio
@@ -163,8 +163,16 @@ function SettingsPage() {
                   />
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <TextField label="Location" value={form.location} onChange={(v) => setForm({ ...form, location: v })} />
-                  <TextField label="Website" value={form.website} onChange={(v) => setForm({ ...form, website: v })} />
+                  <TextField
+                    label="Location"
+                    value={form.location}
+                    onChange={(v) => setForm({ ...form, location: v })}
+                  />
+                  <TextField
+                    label="Website"
+                    value={form.website}
+                    onChange={(v) => setForm({ ...form, website: v })}
+                  />
                 </div>
 
                 <button
@@ -179,9 +187,21 @@ function SettingsPage() {
 
             {active === "notifications" && (
               <div className="space-y-1">
-                <Toggle label="Likes and reposts" description="Ping me when someone reacts to my posts." defaultOn />
-                <Toggle label="New followers" description="Know when someone joins your audience." defaultOn />
-                <Toggle label="Mentions and replies" description="Never miss a direct conversation." defaultOn />
+                <Toggle
+                  label="Likes and reposts"
+                  description="Ping me when someone reacts to my posts."
+                  defaultOn
+                />
+                <Toggle
+                  label="New followers"
+                  description="Know when someone joins your audience."
+                  defaultOn
+                />
+                <Toggle
+                  label="Mentions and replies"
+                  description="Never miss a direct conversation."
+                  defaultOn
+                />
                 <Toggle label="Live Spaces" description="Alert me when people I follow go live." />
                 <Toggle label="Email digest" description="A weekly summary of what you missed." />
               </div>
@@ -189,10 +209,24 @@ function SettingsPage() {
 
             {active === "privacy" && (
               <div className="space-y-1">
-                <Toggle label="Private account" description="Only approved followers can see your posts." />
-                <Toggle label="Hide activity status" description="Don't show when you were last online." />
-                <Toggle label="Filter sensitive content" description="Blur media flagged by the community." defaultOn />
-                <Toggle label="Allow message requests" description="Let people you don't follow reach you." defaultOn />
+                <Toggle
+                  label="Private account"
+                  description="Only approved followers can see your posts."
+                />
+                <Toggle
+                  label="Hide activity status"
+                  description="Don't show when you were last online."
+                />
+                <Toggle
+                  label="Filter sensitive content"
+                  description="Blur media flagged by the community."
+                  defaultOn
+                />
+                <Toggle
+                  label="Allow message requests"
+                  description="Let people you don't follow reach you."
+                  defaultOn
+                />
               </div>
             )}
 
@@ -220,13 +254,20 @@ function SettingsPage() {
                   </div>
                 </div>
                 <Toggle label="Reduce motion" description="Minimise animations across the app." />
-                <Toggle label="Larger text" description="Increase base font size for readability." />
+                <Toggle
+                  label="Larger text"
+                  description="Increase base font size for readability."
+                />
               </div>
             )}
 
             {active === "security" && (
               <div className="space-y-1">
-                <Toggle label="Two-factor authentication" description="Require a code at every new sign-in." defaultOn />
+                <Toggle
+                  label="Two-factor authentication"
+                  description="Require a code at every new sign-in."
+                  defaultOn
+                />
                 <Toggle label="Login alerts" description="Email me about new devices." defaultOn />
                 <div className="rounded-2xl bg-foreground/5 p-4 text-sm text-muted-foreground">
                   Account controls like password changes and session management arrive with the

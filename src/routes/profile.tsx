@@ -1,14 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import {
-  BadgeCheck,
-  CalendarDays,
-  Link2,
-  MapPin,
-  Settings2,
-  Share2,
-  Grid3X3,
-} from "lucide-react";
+import { BadgeCheck, CalendarDays, Link2, MapPin, Settings2, Share2, Grid3X3 } from "lucide-react";
 import { AppShell, Panel } from "@/components/social/AppShell";
 import { Avatar } from "@/components/social/Avatar";
 import { PostCard } from "@/components/social/PostCard";
@@ -41,7 +33,8 @@ function ProfilePage() {
   const mine = posts.filter((p) => p.user_id === currentUser.id);
   const media = posts.filter((p) => p.image_gradient);
   const liked = posts.filter((p) => p.likedByMe);
-  const list = tab === "Posts" ? mine : tab === "Media" ? media : tab === "Likes" ? liked : posts.slice(0, 3);
+  const list =
+    tab === "Posts" ? mine : tab === "Media" ? media : tab === "Likes" ? liked : posts.slice(0, 3);
 
   return (
     <AppShell title="Profile" right={<DefaultRail />}>
@@ -121,7 +114,13 @@ function ProfilePage() {
         <Panel className="flex items-center gap-3">
           <div className="flex -space-x-2">
             {profiles.slice(1, 5).map((p) => (
-              <Avatar key={p.id} name={p.display_name} src={p.avatar_url} ring className="h-8 w-8 text-[0.6rem]" />
+              <Avatar
+                key={p.id}
+                name={p.display_name}
+                src={p.avatar_url}
+                ring
+                className="h-8 w-8 text-[0.6rem]"
+              />
             ))}
           </div>
           <p className="text-sm text-muted-foreground">

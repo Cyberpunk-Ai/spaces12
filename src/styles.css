@@ -156,12 +156,7 @@
 }
 
 @utility gradient-text {
-  background: linear-gradient(
-    135deg,
-    var(--brand),
-    var(--brand-pink),
-    var(--brand-orange)
-  );
+  background: linear-gradient(135deg, var(--brand), var(--brand-pink), var(--brand-orange));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

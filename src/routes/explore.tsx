@@ -5,14 +5,7 @@ import { AppShell, Panel, PageHeader } from "@/components/social/AppShell";
 import { PostCard } from "@/components/social/PostCard";
 import { SearchBox, FollowButton, RailFooter } from "@/components/social/RightRail";
 import { Avatar } from "@/components/social/Avatar";
-import {
-  compact,
-  currentUserId,
-  posts,
-  profiles,
-  topics,
-  trendingTags,
-} from "@/lib/mock-data";
+import { compact, currentUserId, posts, profiles, topics, trendingTags } from "@/lib/mock-data";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/explore")({
