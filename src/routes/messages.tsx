@@ -215,7 +215,7 @@ function MessagesPage() {
                         mine ? "text-white/70" : "text-muted-foreground",
                       )}
                     >
-                      {timeAgo(m.created_at)}
+                      {timeAgo(m.created_at, now)}
                     </p>
                   </div>
                 </div>
