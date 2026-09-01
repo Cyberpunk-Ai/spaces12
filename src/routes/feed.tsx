@@ -94,7 +94,9 @@ function FeedPage() {
   return (
     <AppShell title="Home" right={<DefaultRail />}>
       <div className="mx-auto max-w-2xl space-y-5">
+        <h1 className="sr-only">Your Lumen feed</h1>
         <div className="glass-panel sticky top-2 z-30 flex items-center gap-1 rounded-full p-1.5 shadow-soft lg:top-4">
+
           {tabs.map((t) => (
             <button
               key={t}
