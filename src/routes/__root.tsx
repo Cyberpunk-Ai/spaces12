@@ -77,14 +77,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Lumen — Where Your World Comes to Life" },
+      {
+        name: "description",
+        content:
+          "Lumen is a social space for sharing moments, joining live audio Spaces, and discovering creators and communities built around what you love.",
+      },
+      { name: "author", content: "Lumen" },
+      { property: "og:title", content: "Lumen — Where Your World Comes to Life" },
+      {
+        property: "og:description",
+        content:
+          "Share moments, join live Spaces, and discover creators and communities on Lumen.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+
     ],
     links: [
       {
