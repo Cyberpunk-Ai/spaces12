@@ -3,6 +3,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Search, Send, Phone, Video, Info, Smile, Paperclip, ArrowLeft } from "lucide-react";
 import { AppShell } from "@/components/social/AppShell";
 import { Avatar } from "@/components/social/Avatar";
+import { TimeAgo, useLiveNow } from "@/components/social/TimeAgo";
 import {
   conversations as seedConversations,
   currentUserId,
@@ -11,6 +12,7 @@ import {
   timeAgo,
   type Message,
 } from "@/lib/mock-data";
+
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/messages")({
