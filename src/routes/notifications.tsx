@@ -12,8 +12,10 @@ import {
 } from "lucide-react";
 import { AppShell, PageHeader, Panel } from "@/components/social/AppShell";
 import { Avatar } from "@/components/social/Avatar";
+import { TimeAgo } from "@/components/social/TimeAgo";
 import { DefaultRail } from "@/components/social/RightRail";
-import { getProfile, notifications as seed, timeAgo, type Notification } from "@/lib/mock-data";
+import { getProfile, notifications as seed, type Notification } from "@/lib/mock-data";
+
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/notifications")({
