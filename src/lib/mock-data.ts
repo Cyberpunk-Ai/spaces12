@@ -497,8 +497,10 @@ export function initials(name: string) {
     .toUpperCase();
 }
 
-export function timeAgo(iso: string) {
-  const diff = Date.now() - new Date(iso).getTime();
+export function timeAgo(iso: string, now: number = SEED_ANCHOR) {
+  // Clamp: user-created items carry a real `Date.now()` stamp, which is ahead
+  // of the hour-rounded anchor and would otherwise produce a negative diff.
+  const diff = Math.max(0, now - new Date(iso).getTime());
   const m = Math.floor(diff / 60_000);
   if (m < 1) return "just now";
   if (m < 60) return `${m}m`;
@@ -508,6 +510,7 @@ export function timeAgo(iso: string) {
   if (d < 7) return `${d}d`;
   return `${Math.floor(d / 7)}w`;
 }
+
 
 export function compact(n: number) {
   if (n < 1000) return `${n}`;
