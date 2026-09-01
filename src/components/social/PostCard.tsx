@@ -10,7 +10,9 @@ import {
   BadgeCheck,
 } from "lucide-react";
 import { Avatar } from "@/components/social/Avatar";
-import { compact, getProfile, timeAgo, type Post } from "@/lib/mock-data";
+import { TimeAgo } from "@/components/social/TimeAgo";
+import { compact, getProfile, type Post } from "@/lib/mock-data";
+
 import { cn } from "@/lib/utils";
 
 function Action({
