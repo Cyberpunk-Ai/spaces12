@@ -126,9 +126,11 @@ function MessagesPage() {
                   <span className="min-w-0 flex-1">
                     <span className="flex items-baseline justify-between gap-2">
                       <span className="truncate text-sm font-bold">{p.display_name}</span>
-                      <span className="shrink-0 text-[0.7rem] text-muted-foreground">
-                        {timeAgo(c.updated_at)}
-                      </span>
+                      <TimeAgo
+                        iso={c.updated_at}
+                        className="shrink-0 text-[0.7rem] text-muted-foreground"
+                      />
+
                     </span>
                     <span className="mt-0.5 flex items-center gap-2">
                       <span className="line-clamp-1 flex-1 text-xs text-muted-foreground">
