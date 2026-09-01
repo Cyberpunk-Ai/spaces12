@@ -172,7 +172,7 @@ function MessagesPage() {
             <div className="min-w-0 flex-1">
               <p className="truncate text-sm font-bold">{partner.display_name}</p>
               <p className="truncate text-xs text-muted-foreground">
-                {active.online ? "Active now" : `Active ${timeAgo(active.updated_at)} ago`}
+                {active.online ? "Active now" : `Active ${timeAgo(active.updated_at, now)} ago`}
               </p>
             </div>
             <div className="flex items-center gap-1 text-muted-foreground">
